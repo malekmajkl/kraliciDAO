@@ -52,12 +52,11 @@ public class DepartmentDAO extends JdbcDaoSupport {
         return list;
     }
  
-    public void insertDepartment(String name, String sex) {
-        String sql = "Insert into Bunnies21 (bunny,name,sex) "//
-                + " values (?,?,?) ";
+    public void insertDepartment(String Bunny, String name, String sex, String colour) {
+        String sql = "Insert into Bunnies21 (bunny,name,sex,colour) values (?,?,?,?) ";
         float bunny = this.getMaxBunny() + 1;
-        String deptNo = "D" + bunny;
-        Object[] params = new Object[] { bunny, deptNo, name, sex };
+        
+        Object[] params = new Object[] { bunny,  name, sex, colour };
         this.getJdbcTemplate().update(sql, params);
     }
  

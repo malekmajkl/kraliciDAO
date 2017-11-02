@@ -1,21 +1,25 @@
 package org.o7planning.springmvcjdbc.model;
 
 public class Department {
-
-	private float bunny;
+	   
+	   private float bunny;
 	   private String name;
 	   private String sex;
+	   private String colour;
 	   
 	 
 	   public Department() {
 	 
 	   }
 	 
-	   public Department(float bunny, String name, String sex) {
+	   public Department(float bunny, String name, String sex, String colour) {
+		   
 	       this.bunny = bunny;
 		   this.name = name;
 	       this.sex = sex;
-	   }    
+	       this.colour = colour;
+	   } 
+	  
 	   public Float getBunny() {
 		   return bunny;
 	   }
@@ -38,5 +42,11 @@ public class Department {
 	 
 	   public void setSex(String sex) {
 	       this.sex = sex;
+	   }
+	   public String getColour() {
+		   return colour;
+	   }
+	   public void setColour(String colour) {
+		   this.colour = colour;
 	   }
 }

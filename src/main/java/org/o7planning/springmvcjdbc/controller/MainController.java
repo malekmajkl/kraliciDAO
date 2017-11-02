@@ -18,8 +18,12 @@ public class MainController {
  
     @RequestMapping(value = { "/" }, method = RequestMethod.GET)
     public String welcomePage(Model model) {
+    	departmentDAO.insertDepartment("3", "micinka", "F", "WHITE");
+        departmentDAO.insertDepartment("4", "mitak", "M", "WHITE");
         List<Department> list = departmentDAO.listDepartment();
         model.addAttribute("departments", list);
         return "index";
     }
+    
+    
 }
